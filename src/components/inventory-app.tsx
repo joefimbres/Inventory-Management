@@ -25,6 +25,7 @@ import {
   setVendorStatus,
 } from "@/lib/inventory";
 import { SEED_UPDATED_AT, STORAGE_KEY, seedState } from "@/lib/seed";
+import { describeChanges, isRemoteMode, overlayChanges, type RemoteMode } from "@/lib/shared-save";
 import type { CatalogInput, InventoryState, Item, LineStatus, StockFlag, VendorId } from "@/lib/types";
 
 type Tab = "count" | "order" | "joe" | "items";
@@ -32,7 +33,7 @@ type Warning = "unconfigured" | "unavailable" | null;
 type Editor = { mode: "new" } | { mode: "edit"; item: Item } | null;
 
 type StateResponse = {
-  mode?: "shared" | "local";
+  mode?: RemoteMode | "local";
   warning?: "unconfigured" | "unavailable";
   state?: unknown;
   pinRequired?: boolean;
@@ -60,7 +61,7 @@ export function InventoryApp() {
   const [ready, setReady] = useState(false);
   const [pinRequired, setPinRequired] = useState(false);
   const [state, setState] = useState<InventoryState | null>(null);
-  const [mode, setMode] = useState<"shared" | "local" | null>(null);
+  const [mode, setMode] = useState<RemoteMode | "local" | null>(null);
   const [warning, setWarning] = useState<Warning>(null);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [tab, setTab] = useState<Tab>("count");
@@ -68,18 +69,38 @@ export function InventoryApp() {
   const [editor, setEditor] = useState<Editor>(null);
   const [live, setLive] = useState("");
   const latest = useRef<InventoryState | null>(null);
-  const modeRef = useRef<"shared" | "local" | null>(null);
+  const baseRef = useRef<InventoryState | null>(null);
+  const modeRef = useRef<RemoteMode | "local" | null>(null);
   const saving = useRef(false);
   const timer = useRef<number | null>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const skipFocus = useRef(true);
 
+  function adoptRemote(next: InventoryState, remoteMode: RemoteMode) {
+    latest.current = next;
+    baseRef.current = next;
+    modeRef.current = remoteMode;
+    setState(next);
+    setMode(remoteMode);
+    setWarning(null);
+    writeStored(next);
+  }
+
   async function persist(snapshot: InventoryState) {
+    const base = baseRef.current;
+    const changes = base ? describeChanges(base, snapshot) : null;
     try {
       const response = await fetch("/api/state", {
         method: "PUT",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify(snapshot),
+        body: JSON.stringify({
+          state: snapshot,
+          baseUpdatedAt: base?.updatedAt ?? null,
+          changedItemIds: changes?.changedItemIds ?? [],
+          removedItemIds: changes?.removedItemIds ?? [],
+          changedBatchIds: changes?.changedBatchIds ?? [],
+          removedBatchIds: changes?.removedBatchIds ?? [],
+        }),
         cache: "no-store",
       });
       if (response.status === 401) {
@@ -87,7 +108,7 @@ export function InventoryApp() {
         return;
       }
       const data = (await response.json()) as StateResponse;
-      if (!response.ok || data.mode === "local") {
+      if (!response.ok || !isRemoteMode(data.mode)) {
         modeRef.current = "local";
         setMode("local");
         setWarning(data.warning === "unconfigured" ? "unconfigured" : "unavailable");
@@ -95,8 +116,32 @@ export function InventoryApp() {
         if (latest.current?.updatedAt === snapshot.updatedAt) saving.current = false;
         return;
       }
+      const saved = sanitizeState(data.state) ?? snapshot;
       setSaveError(null);
-      if (latest.current?.updatedAt === snapshot.updatedAt) saving.current = false;
+      if (latest.current?.updatedAt === snapshot.updatedAt) {
+        adoptRemote(saved, data.mode);
+        saving.current = false;
+        return;
+      }
+      const local = latest.current;
+      if (!local) {
+        adoptRemote(saved, data.mode);
+        saving.current = false;
+        return;
+      }
+      const folded = overlayChanges(saved, {
+        state: local,
+        baseUpdatedAt: snapshot.updatedAt,
+        ...describeChanges(snapshot, local),
+      });
+      baseRef.current = saved;
+      latest.current = { ...folded, updatedAt: local.updatedAt };
+      modeRef.current = data.mode;
+      setState(latest.current);
+      setMode(data.mode);
+      writeStored(latest.current);
+      saving.current = false;
+      scheduleSave(latest.current);
     } catch {
       setSaveError("Couldn’t reach shared storage. It’s kept on this phone.");
       if (latest.current?.updatedAt === snapshot.updatedAt) saving.current = false;
@@ -105,7 +150,7 @@ export function InventoryApp() {
 
   function scheduleSave(snapshot: InventoryState) {
     writeStored(snapshot);
-    if (modeRef.current !== "shared") return;
+    if (!isRemoteMode(modeRef.current ?? undefined)) return;
     saving.current = true;
     if (timer.current) window.clearTimeout(timer.current);
     timer.current = window.setTimeout(() => {
@@ -137,18 +182,20 @@ export function InventoryApp() {
           return;
         }
         const data = (await response.json()) as StateResponse;
-        if (data.mode === "shared") {
+        if (isRemoteMode(data.mode)) {
           const remote = sanitizeState(data.state);
           const local = readStored();
-          const next = local && remote && local.updatedAt > remote.updatedAt ? local : (remote ?? seedState());
+          const newerLocal = Boolean(local && remote && local.updatedAt > remote.updatedAt);
+          const next = newerLocal && local ? local : (remote ?? seedState());
           if (cancelled) return;
+          baseRef.current = remote;
           latest.current = next;
-          modeRef.current = "shared";
+          modeRef.current = data.mode;
           setState(next);
-          setMode("shared");
+          setMode(data.mode);
           setWarning(null);
           setReady(true);
-          if (local && remote && local.updatedAt > remote.updatedAt) {
+          if (newerLocal) {
             saving.current = true;
             void persist(next);
           }
@@ -177,10 +224,12 @@ export function InventoryApp() {
     return () => {
       cancelled = true;
     };
+  // Boot runs once. persist reads refs, so a new callback identity must not re-run it.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
-    if (mode !== "shared") return;
+    if (!isRemoteMode(mode ?? undefined)) return;
     const id = window.setInterval(() => {
       if (document.visibilityState !== "visible" || saving.current) return;
       void (async () => {
@@ -188,9 +237,10 @@ export function InventoryApp() {
           const response = await fetch("/api/state", { cache: "no-store" });
           if (!response.ok) return;
           const data = (await response.json()) as StateResponse;
-          if (data.mode !== "shared" || saving.current) return;
+          if (!isRemoteMode(data.mode) || saving.current) return;
           const remote = sanitizeState(data.state);
           if (!remote || remote.updatedAt === latest.current?.updatedAt) return;
+          baseRef.current = remote;
           latest.current = remote;
           setState(remote);
           writeStored(remote);
