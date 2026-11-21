@@ -36,9 +36,13 @@ Soy milk is discontinued and is not on the order. Whole milk (the Sam’s reques
 
 ## Shared storage on Vercel
 
-Create the Vercel project with the name **`inventory-management`** and the Next.js preset. Production works without storage; every phone keeps its own copy until the variables below are set.
+Create the Vercel project with the name **`inventory-management`** and the Next.js preset. Production works without storage; every phone keeps its own copy until a store is connected.
 
-To share one list across phones, add the free **Upstash Redis** integration from the Vercel Marketplace (Storage → Marketplace). Connect it to this project. Do not pick a paid plan. The integration injects one of these pairs — either pair is enough:
+The list is one private JSON file, `inventory/state.json`. The first visit writes the seed list. Later visits load that shared list. If two phones save at once, each save writes only the items that phone changed, on top of the latest copy.
+
+**Vercel Blob (preferred).** Create a private Blob store and connect it to this project. Vercel sets `BLOB_READ_WRITE_TOKEN` for production, preview, and development. Do not commit the token. `/api/state` then reports `"mode": "blob"`, and the “this phone only” banner goes away.
+
+**Upstash Redis (alternative).** Used only when Blob is not configured. Add the free Upstash Redis integration from the Vercel Marketplace (Storage → Marketplace). Do not pick a paid plan. Either pair is enough:
 
 | Variable | Purpose |
 | --- | --- |
@@ -47,11 +51,11 @@ To share one list across phones, add the free **Upstash Redis** integration from
 | `KV_REST_API_URL` | Same URL, older Marketplace name |
 | `KV_REST_API_TOKEN` | Same token, older Marketplace name |
 
-Redeploy after they appear. The “this phone only” banner goes away, and edits are stored under the Redis key `hhc:inventory:v1`. The first visit writes the seed list. Later visits load that shared list. If two people save at once, the last save wins.
+Redis keeps the list under the key `hhc:inventory:v1`. `/api/state` then reports `"mode": "shared"`.
 
 Copy `.env.example` to `.env.local` for the same variables on your machine. Never commit `.env.local`.
 
-If the variables are missing, or Redis does not answer, the page falls back to the seed list plus this browser’s `localStorage` and shows the banner.
+If no store is configured, or the store does not answer, the page falls back to the seed list plus this browser’s `localStorage` and shows the banner.
 
 ### Optional PIN
 
