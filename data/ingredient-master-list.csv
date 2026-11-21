@@ -1,0 +1,136 @@
+section,ingredient,overall_status,current_menu_items,other_platform_items,only_on_old_or_other_platforms,discontinued,note,key
+Dairy (and dairy alternatives),2% milk (SkyTab milk option),STATED,Latte [STATED]; Specialty Lattes [STATED],,no,no,,milk_2pct
+Dairy (and dairy alternatives),Almond milk,STATED,Latte [STATED]; Specialty Lattes [STATED],,no,no,dairy alternative,almond_milk
+Dairy (and dairy alternatives),Blue cheese crumbles,STATED,,Buffalo Chicken Blitz [STATED],yes,no,Slice-only item,blue_cheese
+Dairy (and dairy alternatives),Butter,ESTIMATED,Avocado Toast [ESTIMATED]; Ham Bagel [ESTIMATED]; Sandwich (Breakfast Panini) [ESTIMATED]; Surfer's Souffle [ESTIMATED],,no,no,,butter
+Dairy (and dairy alternatives),"Cheddar, sharp",STATED,Bacon Chicken Ranch Wrap [STATED]; Breakfast Burrito [STATED]; Buffalo Chicken Wrap [ESTIMATED]; Ham Bagel [STATED]; Sandwich (Breakfast Panini) [STATED]; Turkey Wrap [STATED],,no,no,,cheddar
+Dairy (and dairy alternatives),Cheese (type not stated),STATED,,Breakfast Bagel Sandwich [STATED],yes,no,,cheese_unspec
+Dairy (and dairy alternatives),"Chia yogurt, house (non-dairy per SQ/Slice/UE)",STATED,Chia Oatmeal [STATED]; Green Bowl [STATED],,no,no,base yogurt unknown; Athena estimated coconut yogurt,chia_yogurt
+Dairy (and dairy alternatives),Coconut milk,STATED,Green Bowl [STATED]; Hiking Smoothie [STATED]; Latte [STATED]; Specialty Lattes [STATED]; Tropical Smoothie [STATED],Jackass (smoothie) [STATED],no,no,dairy alternative; also a smoothie base,coconut_milk
+Dairy (and dairy alternatives),Coconut yogurt (base for chia yogurt),ESTIMATED,Green Bowl [ESTIMATED],,no,no,,coconut_yogurt
+Dairy (and dairy alternatives),"Cream, for house cinnamon-infused cream",STATED,Chia Oatmeal [STATED],,no,no,"UE calls it ""cinnamon whipped cream""",cream
+Dairy (and dairy alternatives),Feta,STATED,Veggie Pizza [STATED]; Veggie Salad [STATED],,no,no,,feta
+Dairy (and dairy alternatives),Milk (dairy; type not stated on menu),STATED,Latte [STATED]; Specialty Lattes [STATED]; Surfer's Souffle [ESTIMATED],Cappuccino [STATED]; Iced Latte (16 oz) [INFERRED]; Small hot chocolate [INFERRED],no,no,,milk
+Dairy (and dairy alternatives),Mozzarella,STATED,Avocado Toast [STATED]; Cheese Pizza [INFERRED]; Chicken Pizza [STATED]; Cuban [STATED]; Napa [STATED]; Pineapple Pizza [STATED]; Pork Pizza [STATED]; Sausage Pizza [STATED]; Spinach Bagel [STATED]; Veggie Pizza [STATED]; Veggie Wrap [ESTIMATED],Buffalo Chicken Blitz [STATED],no,no,,mozzarella
+Dairy (and dairy alternatives),Oat milk,STATED,Latte [STATED]; Specialty Lattes [STATED],,no,no,dairy alternative,oat_milk
+Dairy (and dairy alternatives),Provolone,STATED,Avocado Toast [STATED]; Ham Bagel [STATED],Veggie Panini [STATED],no,no,"older menus only (SQ, UE)",provolone
+Dairy (and dairy alternatives),Sour cream,STATED,Breakfast Burrito [STATED],,no,no,,sour_cream
+Dairy (and dairy alternatives),"Soy milk - DISCONTINUED (phasing out as of Nov 20, 2026)",STATED,Latte [STATED]; Specialty Lattes [STATED],,no,yes,still listed as a SkyTab option,soy_milk
+Dairy (and dairy alternatives),Swiss cheese,STATED,Cuban [STATED]; Spinach Bagel [STATED],,no,no,"older/3rd-party menus (SQ, Slice, UE)",swiss
+Eggs,Eggs,STATED,Avocado Toast [STATED]; Breakfast Burrito [STATED]; Ham Bagel [STATED]; Sandwich (Breakfast Panini) [STATED]; Spinach Bagel [STATED]; Surfer's Souffle [ESTIMATED],Breakfast Bagel Sandwich [STATED],no,no,,egg
+Bakery,"Bagels, everything",STATED,Spinach Bagel [STATED],Bagels [STATED],no,no,,bagel_everything
+Bakery,"Bagels, plain",STATED,Ham Bagel [STATED],Bagels [STATED]; Breakfast Bagel Sandwich [INFERRED],no,no,,bagel_plain
+Bakery,Cauliflower pizza crust,STATED,,Buffalo Chicken Blitz [STATED],yes,no,Slice Buffalo Chicken Blitz; also mentioned in Hawaii Islander article,cauli_crust
+Bakery,French bread,STATED,Avocado Toast [STATED],,no,no,old Square Avocado Toast only,french_bread
+Bakery,Gluten-free bread (panini GF option),INFERRED,Sandwich (Breakfast Panini) [INFERRED],,no,no,,gf_bread
+Bakery,Gluten-free pizza crust,STATED,Cheese Pizza [STATED]; Chicken Pizza [STATED]; Pineapple Pizza [STATED]; Pork Pizza [STATED]; Sausage Pizza [STATED]; Veggie Pizza [STATED],,no,no,,gf_crust
+Bakery,Hoagie rolls,STATED,Avocado Toast [STATED]; Cuban [STATED]; Napa [STATED]; Sandwich (Breakfast Panini) [STATED],Spicy Vietnamese Panini [INFERRED]; Veggie Panini [INFERRED],no,no,website says locally sourced,hoagie
+Bakery,Pizza dough / crust,STATED,Cheese Pizza [STATED]; Chicken Pizza [STATED]; Pineapple Pizza [STATED]; Pork Pizza [STATED]; Sausage Pizza [STATED]; Veggie Pizza [STATED],,no,no,,pizza_dough
+Bakery,Sourdough bread (Surfer's Souffle),STATED,Surfer's Souffle [STATED],,no,no,"homepage: ""our signature sourdough""",sourdough
+Bakery,Spinach (green) tortillas,STATED,Bacon Chicken Ranch Wrap [STATED]; Breakfast Burrito [STATED]; Buffalo Chicken Wrap [ESTIMATED]; Turkey Wrap [STATED]; Veggie Wrap [ESTIMATED],,no,no,,tortilla_spinach
+Bakery,Toast bread (unspecified),STATED,Avocado Toast [STATED],,no,no,UE Avocado Toast,toast_bread
+Produce,Acai (frozen packs),STATED,Acai Smoothie [STATED]; Summit Bowl [STATED],,no,no,"website: ""full packet""/""full scoop""",acai
+Produce,Avocados,STATED,Avocado Toast [STATED]; Breakfast Burrito [STATED]; Sandwich (Breakfast Panini) [STATED],,no,no,Slice: local avocados,avocado
+Produce,Bananas (fresh slices; frozen for blends),STATED,Acai Smoothie [STATED]; Chia Oatmeal [STATED]; Green Bowl [STATED]; Hiking Smoothie [STATED]; Summit Bowl [STATED]; Surfer's Souffle [ESTIMATED]; Tropical Smoothie [STATED],,no,no,Slice says frozen banana in the blend,banana
+Produce,Basil,STATED,Thai Chicken Salad [STATED],,no,no,,basil
+Produce,Bell peppers,STATED,Breakfast Burrito [STATED]; Veggie Salad [STATED],,no,no,,bell_pepper
+Produce,Berries (unspecified),STATED,Chia Oatmeal [STATED],,no,no,Slice oatmeal,berries
+Produce,Blueberries,STATED,Chia Oatmeal [STATED]; Green Bowl [STATED]; Summit Bowl [STATED]; Surfer's Souffle [ESTIMATED],Blueberry Ginger Lemonade [STATED],no,no,,blueberry
+Produce,Carrots,STATED,Thai Chicken Salad [STATED]; Veggie Salad [STATED],,no,no,,carrot
+Produce,Cilantro,STATED,,Spicy Vietnamese Panini [STATED],yes,no,old Square item,cilantro
+Produce,Cucumbers,STATED,Thai Chicken Salad [STATED]; Veggie Salad [STATED],,no,no,,cucumber
+Produce,Culinary lavender (Maui),STATED,Specialty Lattes [STATED],,no,no,"Square: ""ground Maui lavender""",lavender
+Produce,Fresh tropical fruit (types not stated),STATED,Surfer's Souffle [STATED],,no,no,Surfer's Souffle,tropical_fruit
+Produce,Garlic,STATED,Chicken Pizza [STATED]; Pineapple Pizza [STATED]; Pork Pizza [STATED]; Sausage Pizza [STATED],,no,no,in house red sauce,garlic
+Produce,Ginger,STATED,,Blueberry Ginger Lemonade [STATED]; Jackass (smoothie) [STATED],yes,no,,ginger
+Produce,"Herbs (""island herbs"" in red sauce)",STATED,Chicken Pizza [STATED]; Pineapple Pizza [STATED]; Pork Pizza [STATED]; Sausage Pizza [STATED],,no,no,,herbs
+Produce,Jackfruit,STATED,,Jackass (smoothie) [STATED],yes,no,old Square item,jackfruit
+Produce,Jalapenos,STATED,Pork Pizza [STATED],,no,no,,jalapeno
+Produce,Kale,STATED,Green Bowl [STATED]; Hiking Smoothie [STATED],,no,no,,kale
+Produce,Lemons (for house lemonade),INFERRED,,Blueberry Ginger Lemonade [INFERRED]; Strawberry Mint Lemonade [INFERRED],yes,no,,lemon
+Produce,Mango (frozen for blends),STATED,Acai Smoothie [STATED]; Green Bowl [STATED]; Summit Bowl [STATED]; Tropical Smoothie [STATED],,no,no,Slice says frozen mango,mango
+Produce,Marinated veggies (unspecified),STATED,,Spicy Vietnamese Panini [STATED],yes,no,old Square item,marinated_veg
+Produce,Mint,STATED,,Jackass (smoothie) [STATED]; Strawberry Mint Lemonade [STATED],yes,no,,mint
+Produce,Mixed berries,STATED,Acai Smoothie [STATED],,no,no,SQ/UE Acai Smoothie,mixed_berries
+Produce,Mixed greens (organic local greens),STATED,Thai Chicken Salad [STATED]; Veggie Salad [STATED],,no,no,Kahumana Farms named as partner,greens
+Produce,Mushrooms,STATED,Spinach Bagel [STATED]; Veggie Pizza [STATED]; Veggie Wrap [ESTIMATED],Veggie Panini [STATED],no,no,,mushroom
+Produce,Onions,STATED,Breakfast Burrito [STATED]; Chicken Pizza [STATED]; Pork Pizza [STATED]; Spinach Bagel [STATED]; Thai Chicken Salad [STATED]; Turkey Wrap [STATED]; Veggie Pizza [STATED]; Veggie Salad [STATED]; Veggie Wrap [ESTIMATED],Veggie Panini [STATED],no,no,,onion
+Produce,Pineapple,STATED,Hiking Smoothie [STATED]; Pineapple Pizza [STATED],Jackass (smoothie) [STATED],no,no,,pineapple
+Produce,Potatoes,STATED,Breakfast Burrito [STATED],,no,no,,potato
+Produce,Red onion,STATED,,Buffalo Chicken Blitz [STATED],yes,no,,red_onion
+Produce,Spinach / baby spinach,STATED,Acai Smoothie [STATED]; Bacon Chicken Ranch Wrap [STATED]; Buffalo Chicken Wrap [ESTIMATED]; Chicken Pizza [STATED]; Green Bowl [STATED]; Hiking Smoothie [STATED]; Napa [STATED]; Spinach Bagel [STATED]; Tropical Smoothie [STATED]; Turkey Wrap [STATED]; Veggie Pizza [STATED]; Veggie Wrap [ESTIMATED],Veggie Panini [STATED],no,no,,spinach
+Produce,Sprouts (alfalfa per Slice),STATED,Avocado Toast [STATED]; Turkey Wrap [STATED]; Veggie Wrap [ESTIMATED],,no,no,,sprouts
+Produce,Strawberries,STATED,Chia Oatmeal [STATED]; Summit Bowl [STATED]; Surfer's Souffle [ESTIMATED],Strawberry Mint Lemonade [STATED],no,no,,strawberry
+Produce,Sweet corn,STATED,Turkey Wrap [STATED],,no,no,,corn
+Produce,Tomatoes,STATED,Bacon Chicken Ranch Wrap [STATED]; Buffalo Chicken Wrap [ESTIMATED]; Chicken Pizza [STATED]; Napa [STATED]; Sausage Pizza [STATED]; Turkey Wrap [STATED]; Veggie Pizza [STATED]; Veggie Salad [STATED]; Veggie Wrap [ESTIMATED],Veggie Panini [STATED],no,no,,tomato
+Produce,Zucchini,STATED,Veggie Pizza [STATED]; Veggie Wrap [ESTIMATED],Veggie Panini [STATED],no,no,,zucchini
+Meat and seafood (and protein alternatives),Bacon,STATED,Bacon Chicken Ranch Wrap [STATED]; Breakfast Burrito [STATED]; Pineapple Pizza [STATED]; Sandwich (Breakfast Panini) [STATED]; Turkey Wrap [STATED],,no,no,,bacon
+Meat and seafood (and protein alternatives),Chicken (grilled/seasoned),STATED,Bacon Chicken Ranch Wrap [STATED]; Breakfast Burrito [STATED]; Buffalo Chicken Wrap [INFERRED]; Chicken Pizza [STATED]; Napa [STATED]; Sandwich (Breakfast Panini) [STATED]; Thai Chicken Salad [STATED],Buffalo Chicken Blitz [INFERRED]; Spicy Vietnamese Panini [STATED],no,no,,chicken
+Meat and seafood (and protein alternatives),"Ham, sliced",STATED,Breakfast Burrito [STATED]; Cuban [STATED]; Ham Bagel [STATED]; Pineapple Pizza [STATED]; Sandwich (Breakfast Panini) [STATED],Breakfast Bagel Sandwich [STATED],no,no,,ham
+Meat and seafood (and protein alternatives),"Pork, slow-roasted / shredded",STATED,Cuban [STATED]; Pork Pizza [STATED],Spicy Vietnamese Panini [STATED],no,no,,pork
+Meat and seafood (and protein alternatives),Portuguese sausage,STATED,Breakfast Burrito [STATED],,no,no,,portuguese_sausage
+Meat and seafood (and protein alternatives),Sausage / sausage crumbles,STATED,Breakfast Burrito [STATED]; Sandwich (Breakfast Panini) [STATED]; Sausage Pizza [STATED],,no,no,,sausage
+Meat and seafood (and protein alternatives),Tofu (meat alternative),STATED,Breakfast Burrito [STATED]; Sandwich (Breakfast Panini) [STATED],,no,no,,tofu
+Meat and seafood (and protein alternatives),"Turkey, sliced",STATED,Breakfast Burrito [STATED]; Sandwich (Breakfast Panini) [STATED]; Turkey Wrap [STATED],,no,no,,turkey
+Dry goods and spices,"Almonds, toasted",STATED,Green Bowl [STATED],,no,no,,almonds
+Dry goods and spices,Black pepper,STATED,Avocado Toast [STATED]; Ham Bagel [STATED]; Spinach Bagel [STATED],,no,no,,pepper
+Dry goods and spices,Chia seeds,STATED,Chia Oatmeal [STATED]; Green Bowl [STATED],,no,no,,chia
+Dry goods and spices,Cinnamon,STATED,Chia Oatmeal [STATED],,no,no,,cinnamon
+Dry goods and spices,Coconut flakes,STATED,Summit Bowl [STATED],,no,no,,coconut_flakes
+Dry goods and spices,Cranberries (dried),STATED,Veggie Salad [STATED],,no,no,Slice/UE Veggie Salad,dried_cranberry
+Dry goods and spices,"Granola, house-made",STATED,Chia Oatmeal [STATED]; Summit Bowl [STATED],,no,no,recipe/inputs not published,granola
+Dry goods and spices,House spice blend (potatoes),STATED,Breakfast Burrito [STATED],,no,no,,spice_blend
+Dry goods and spices,Oats (whole-grain),STATED,Chia Oatmeal [STATED],,no,no,,oats
+Dry goods and spices,Peanut butter,STATED,Acai Smoothie [STATED]; Hiking Smoothie [STATED]; Thai Chicken Salad [ESTIMATED]; Tropical Smoothie [STATED],,no,no,,peanut_butter
+Dry goods and spices,Peanuts,STATED,Thai Chicken Salad [STATED],Spicy Vietnamese Panini [STATED],no,no,,peanuts
+Dry goods and spices,Powdered sugar,ESTIMATED,Surfer's Souffle [ESTIMATED],,no,no,,powdered_sugar
+Dry goods and spices,Protein powder,STATED,Acai Smoothie [STATED]; Hiking Smoothie [STATED]; Tropical Smoothie [STATED],,no,no,,protein_powder
+Dry goods and spices,Salt,STATED,Avocado Toast [STATED]; Ham Bagel [STATED]; Spinach Bagel [STATED],,no,no,,salt
+Dry goods and spices,Spiced almonds,STATED,Veggie Salad [STATED],,no,no,,spiced_almonds
+Dry goods and spices,"Sugar (lemonade, batter)",INFERRED,,Blueberry Ginger Lemonade [INFERRED]; Strawberry Mint Lemonade [INFERRED],yes,no,,sugar
+Sauces and condiments,"""Secret batter"" for Surfer's Souffle (recipe not published)",STATED,Surfer's Souffle [STATED],,no,no,,batter
+Sauces and condiments,Basil pesto,STATED,Chicken Pizza [STATED]; Napa [STATED]; Veggie Pizza [STATED]; Veggie Wrap [ESTIMATED],Veggie Panini [STATED],no,no,,pesto
+Sauces and condiments,Buffalo sauce,STATED,Buffalo Chicken Wrap [INFERRED],Buffalo Chicken Blitz [STATED],no,no,,buffalo
+Sauces and condiments,Chimichurri,STATED,Pork Pizza [STATED],,no,no,Slice/UE Pork Pizza,chimichurri
+Sauces and condiments,Dill pickles,STATED,Cuban [STATED],,no,no,,pickles
+Sauces and condiments,Honey,STATED,Summit Bowl [STATED],,no,no,,honey
+Sauces and condiments,"House red sauce (tomatoes, garlic, island herbs)",STATED,Cheese Pizza [INFERRED]; Chicken Pizza [STATED]; Pineapple Pizza [STATED]; Pork Pizza [STATED]; Sausage Pizza [STATED]; Veggie Pizza [STATED],,no,no,,red_sauce
+Sauces and condiments,Marinara,STATED,,Veggie Panini [STATED],yes,no,old Square item,marinara
+Sauces and condiments,Olive oil,STATED,Breakfast Burrito [ESTIMATED]; Cheese Pizza [ESTIMATED]; Chicken Pizza [ESTIMATED]; Pineapple Pizza [STATED]; Pork Pizza [STATED]; Sausage Pizza [STATED]; Veggie Pizza [STATED]; Veggie Salad [ESTIMATED],,no,no,,olive_oil
+Sauces and condiments,Olives,STATED,Veggie Salad [STATED],,no,no,,olives
+Sauces and condiments,Ranch dressing,STATED,Bacon Chicken Ranch Wrap [STATED]; Buffalo Chicken Wrap [ESTIMATED]; Turkey Wrap [STATED],Buffalo Chicken Blitz [STATED],no,no,,ranch
+Sauces and condiments,Salad dressing (house; type not stated),INFERRED,Veggie Salad [INFERRED],,no,no,,dressing
+Sauces and condiments,Salsa,STATED,Breakfast Burrito [STATED],,no,no,,salsa
+Sauces and condiments,Spicy peanut sauce (house),STATED,Thai Chicken Salad [STATED],,no,no,,peanut_sauce
+Sauces and condiments,Sriracha (peanut-sauce heat),ESTIMATED,Thai Chicken Salad [ESTIMATED],,no,no,,sriracha
+Sauces and condiments,Sriracha mayo,STATED,,Spicy Vietnamese Panini [STATED],yes,no,old Square item,sriracha_mayo
+Sauces and condiments,Syrup for French toast (type not stated),STATED,Surfer's Souffle [STATED],,no,no,,syrup_breakfast
+Sauces and condiments,Yellow mustard,STATED,Cuban [STATED],,no,no,,mustard
+Coffee and tea,"Chai, house-made",STATED,Specialty Lattes [STATED],,no,no,,chai
+Coffee and tea,Chocolate syrup / sauce,STATED,Specialty Lattes [STATED],,no,no,,choc_syrup
+Coffee and tea,Ghirardelli chocolate,STATED,Specialty Lattes [STATED],,no,no,Slice Mexican Mocha,ghirardelli
+Coffee and tea,Harney & Sons hot tea sachets (assorted),STATED,,Hot Tea [STATED],yes,no,,tea_hot
+Coffee and tea,"Harney & Sons tea, house-brewed iced",STATED,,Fresh Brewed Iced Tea [STATED],yes,no,,tea_iced
+Coffee and tea,"Hawaiian Paradise Coffee Paradise Roast (ground, medium)",STATED,House Coffee - Large [STATED]; House Coffee - Medium [STATED]; House Coffee - Small [STATED],Iced Coffee (16 oz) [INFERRED],no,no,,drip_coffee
+Coffee and tea,Hot chocolate mix,INFERRED,,Small hot chocolate [INFERRED],yes,no,old Square item,hot_choc
+Coffee and tea,"Mexican chocolate, house-made",STATED,Specialty Lattes [STATED],,no,no,,mexican_choc
+Coffee and tea,Retail bag of coffee (Royal Kona Espresso Roast per website),INFERRED,,Coffee bag (retail) [INFERRED],yes,no,old Square retail item,coffee_bag
+Coffee and tea,"Royal Kona Espresso Roast, 10% Kona blend (Hawaii Coffee Company)",STATED,House Coffee - Large [STATED]; House Coffee - Medium [STATED]; House Coffee - Small [STATED]; Latte [STATED]; Specialty Lattes [STATED],Americano [STATED]; Cappuccino [STATED]; Espresso / Double espresso [INFERRED]; Iced Latte (16 oz) [INFERRED],no,no,,espresso
+Coffee and tea,Syrup: caramel,STATED,House Coffee - Large [STATED]; House Coffee - Medium [STATED]; House Coffee - Small [STATED]; Latte [STATED],,no,no,,syr_caramel
+Coffee and tea,Syrup: chai tea spice,STATED,House Coffee - Large [STATED]; House Coffee - Medium [STATED]; House Coffee - Small [STATED]; Latte [STATED]; Specialty Lattes [STATED],,no,no,,syr_chai
+Coffee and tea,Syrup: chocolate,STATED,House Coffee - Large [STATED]; House Coffee - Medium [STATED]; House Coffee - Small [STATED]; Latte [STATED],,no,no,,syr_choc
+Coffee and tea,Syrup: coconut,STATED,House Coffee - Large [STATED]; House Coffee - Medium [STATED]; House Coffee - Small [STATED]; Latte [STATED]; Specialty Lattes [STATED],,no,no,,syr_coconut
+Coffee and tea,Syrup: cookie dough,STATED,House Coffee - Large [STATED]; House Coffee - Medium [STATED]; House Coffee - Small [STATED]; Latte [STATED]; Specialty Lattes [STATED],,no,no,,syr_cookie
+Coffee and tea,Syrup: hazelnut,STATED,House Coffee - Large [STATED]; House Coffee - Medium [STATED]; House Coffee - Small [STATED]; Latte [STATED],,no,no,,syr_hazelnut
+Coffee and tea,Syrup: lavender (Slice: house-made Maui lavender),STATED,House Coffee - Large [STATED]; House Coffee - Medium [STATED]; House Coffee - Small [STATED]; Latte [STATED]; Specialty Lattes [STATED],,no,no,,syr_lavender
+Coffee and tea,Syrup: macadamia nut,STATED,House Coffee - Large [STATED]; House Coffee - Medium [STATED]; House Coffee - Small [STATED]; Latte [STATED]; Specialty Lattes [STATED],,no,no,,syr_macnut
+Coffee and tea,Syrup: peach,STATED,House Coffee - Large [STATED]; House Coffee - Medium [STATED]; House Coffee - Small [STATED]; Latte [STATED],,no,no,,syr_peach
+Coffee and tea,Syrup: pumpkin spice,STATED,House Coffee - Large [STATED]; House Coffee - Medium [STATED]; House Coffee - Small [STATED]; Latte [STATED],,no,no,,syr_pumpkin
+Coffee and tea,Syrup: sugar-free chocolate,STATED,Latte [STATED],,no,no,Slice flavor list only,syr_sf_choc
+Coffee and tea,Syrup: sugar-free vanilla,STATED,Latte [STATED],,no,no,Slice flavor list only,syr_sf_vanilla
+Coffee and tea,Syrup: vanilla,STATED,House Coffee - Large [STATED]; House Coffee - Medium [STATED]; House Coffee - Small [STATED]; Latte [STATED],,no,no,,syr_vanilla
+Coffee and tea,White chocolate (sauce),STATED,Specialty Lattes [STATED],,no,no,,white_choc
+Beverages,Filtered water (hot),STATED,House Coffee - Large [INFERRED]; House Coffee - Medium [INFERRED]; House Coffee - Small [INFERRED],Americano [STATED]; Hot Tea [INFERRED],no,no,,water
+Beverages,Ice,STATED,,Blueberry Ginger Lemonade [INFERRED]; Fresh Brewed Iced Tea [INFERRED]; Iced Coffee (16 oz) [INFERRED]; Iced Latte (16 oz) [INFERRED]; Strawberry Mint Lemonade [STATED],yes,no,,ice
+Beverages,"Lemonade, house-made",STATED,,Blueberry Ginger Lemonade [STATED]; Strawberry Mint Lemonade [STATED],yes,no,,lemonade
+Beverages,POG juice (passion-orange-guava),STATED,Acai Smoothie [STATED]; Green Bowl [STATED]; Hiking Smoothie [STATED]; Summit Bowl [STATED]; Tropical Smoothie [STATED],,no,no,,pog
