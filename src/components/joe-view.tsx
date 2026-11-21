@@ -40,7 +40,7 @@ export function JoeView({
           Mark what you ordered, then what arrived. It stays pending until you check it in.
         </p>
       </div>
-      <p className="rounded-2xl border border-line bg-card p-4 font-semibold">
+      <p className="rounded-[20px] border border-line bg-card p-4 font-semibold">
         {pendingCount(state) === 0
           ? "Nothing is waiting."
           : `${waiting} to order · ${ordered} ordered, not here yet`}
@@ -58,7 +58,7 @@ export function JoeView({
         />
       ))}
       {done.length > 0 ? (
-        <details className="rounded-2xl border border-line bg-card">
+        <details className="rounded-[20px] border border-line bg-card">
           <summary>
             <span className="summary-row px-4">
               Checked in ({done.reduce((total, batch) => total + batch.lines.length, 0)})
@@ -66,7 +66,7 @@ export function JoeView({
           </summary>
           <div className="flex flex-col gap-3 px-3 pb-3">
             {done.map((batch) => (
-              <article key={batch.id} className="rounded-xl bg-sand p-3">
+              <article key={batch.id} className="rounded-[14px] bg-sand p-3">
                 <p className="text-sm text-muted">Sent {formatWhen(batch.submittedAt)}</p>
                 <ul className="mt-2 flex flex-col gap-2">
                   {batch.lines.map((line) => (
@@ -107,7 +107,7 @@ function BatchCard({
   const groups = groupLines(openLines).filter((group) => group.lines.length > 0);
 
   return (
-    <article className="flex flex-col gap-3 rounded-2xl border border-line bg-card p-3">
+    <article className="flex flex-col gap-3 rounded-[20px] border border-line bg-card p-3">
       <h3 className="font-display text-xl">Sent {formatWhen(batch.submittedAt)}</h3>
       {groups.map((group) => {
         const waiting = group.lines.filter((line) => line.status === "submitted");
@@ -120,7 +120,7 @@ function BatchCard({
               {group.lines.map((line) => {
                 const qty = formatQty(line.qty);
                 return (
-                  <li key={line.itemId} className="rounded-xl bg-sand p-3">
+                  <li key={line.itemId} className="rounded-[14px] bg-sand p-3">
                     <p className="font-semibold">{line.name}</p>
                     <p className="text-sm text-muted">
                       {statusLabel(line.status)}

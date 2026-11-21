@@ -1,15 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { DM_Sans, Fraunces } from "next/font/google";
 import "./globals.css";
 
-const sans = Source_Sans_3({
+const sans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-source",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
   display: "swap",
 });
 
 const display = Fraunces({
   subsets: ["latin"],
+  style: "italic",
+  axes: ["SOFT", "WONK", "opsz"],
   variable: "--font-fraunces",
   display: "swap",
 });
@@ -25,7 +28,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#1b4332",
+  themeColor: "#fff8e8",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

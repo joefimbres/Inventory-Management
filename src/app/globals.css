@@ -1,53 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f3eee4;
-  --ink: #241c16;
-  --card: #fffdf8;
-  --line: #e3d6c4;
-  --sand: #f6ead7;
-  --muted: #6d6258;
-  --forest: #1b4332;
-  --moss: #1b4332;
-  --focus: #1b4332;
-  --low: #6d4500;
-  --low-bg: #f8e7c4;
-  --out: #8d1d2c;
-  --out-bg: #f8d9d6;
-  --ok: #1b4332;
-  --ok-bg: #dceadf;
-  --gold: #6d4a00;
-  --gold-bg: #f3e6c4;
-  --clay: #8a3414;
-  --clay-bg: #f6e2d8;
-  --hhc-sans: var(--font-source), "Avenir Next", "Segoe UI", sans-serif;
-  --hhc-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  /* Cafe mode from hiking-hawaii-cafe.vercel.app site.css */
+  --brand: #f05223;
+  --ink: #54201f;
+  --ribbon-ink: #381514;
+  --paper: #fff8e8;
+  --light: #ffe4d6;
+  --card: #ffffff;
+  --line: #e6cfc6;
+  --sand: #fff0e6;
+  --muted: #8d5c56;
+  --moss: #f05223;
+  --focus: #54201f;
+  --low: #4c3d1c;
+  --low-bg: #ffc533;
+  --out: #9a2414;
+  --out-bg: #ffd8cc;
+  --ok: #263f2a;
+  --ok-bg: #75b743;
+  --gold: #4c3d1c;
+  --gold-bg: #fff0c8;
+  --clay: #54201f;
+  --clay-bg: #ffd5c8;
+  --hhc-sans: var(--font-body), "DM Sans", Arial, sans-serif;
+  --hhc-display: var(--font-fraunces), Fraunces, Georgia, serif;
   color-scheme: light;
-  accent-color: var(--forest);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #161310;
-    --ink: #f6f1e8;
-    --card: #241f1b;
-    --line: #3c332c;
-    --sand: #2c261f;
-    --muted: #cbbba8;
-    --moss: #9dccb4;
-    --focus: #f0d7a2;
-    --low: #f0d7a2;
-    --low-bg: #3d3118;
-    --out: #f3c1c1;
-    --out-bg: #3d201e;
-    --ok: #b7d7c4;
-    --ok-bg: #1c3328;
-    --gold: #f0ddb0;
-    --gold-bg: #3a3018;
-    --clay: #f0b8a4;
-    --clay-bg: #3d241c;
-    color-scheme: dark;
-  }
+  accent-color: var(--brand);
 }
 
 @theme inline {
@@ -78,7 +57,12 @@ body {
   overflow-wrap: break-word;
 }
 
-h1, h2, h3 {
+h1, h2, h3, .font-display {
+  font-family: var(--hhc-display);
+  font-style: italic;
+  font-weight: 900;
+  font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 72, "wght" 900;
+  letter-spacing: -0.045em;
   text-wrap: balance;
 }
 
@@ -88,7 +72,7 @@ p, li {
 
 :where(a, button, input, select, textarea, summary):focus-visible {
   outline: 3px solid var(--focus);
-  outline-offset: 2px;
+  outline-offset: 4px;
 }
 
 :where(input, select, textarea) {
@@ -97,7 +81,7 @@ p, li {
   min-height: 3rem;
   width: 100%;
   border: 1px solid var(--line);
-  border-radius: 0.8rem;
+  border-radius: 14px;
   background: var(--card);
   color: var(--ink);
   padding: 0.5rem 0.75rem;
@@ -153,35 +137,50 @@ details[open] > summary .chevron {
   justify-content: center;
   gap: 0.4rem;
   min-height: 3rem;
-  border-radius: 0.85rem;
-  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  padding: 0.7rem 1.35rem;
   font-weight: 700;
-  border: 1px solid transparent;
+  border: 2px solid var(--ink);
+  transition: transform 0.18s ease, background 0.18s ease;
 }
 
 .btn:disabled {
   opacity: 0.45;
 }
 
+.btn:hover {
+  transform: translateY(-2px);
+}
+
 .btn-primary {
-  background: #1b4332;
-  color: #f6f1e8;
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
 }
 
 .btn-secondary {
-  background: var(--card);
+  background: transparent;
   color: var(--ink);
-  border-color: var(--line);
+  border-color: var(--ink);
 }
 
 .btn-danger {
-  background: var(--out-bg);
-  color: var(--out);
+  background: transparent;
+  color: var(--brand);
+  border-color: var(--brand);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn:hover {
+    transform: none;
+    transition: none;
+  }
 }
 
 .choice {
   min-height: 3rem;
-  border-radius: 0.8rem;
+  border-radius: 40px;
   border: 1px solid var(--line);
   background: var(--sand);
   color: var(--ink);
@@ -204,9 +203,9 @@ details[open] > summary .chevron {
 }
 
 .choice[aria-pressed="true"].choice-out {
-  background: var(--out-bg);
-  color: var(--out);
-  border-color: var(--out);
+  background: var(--brand);
+  color: var(--paper);
+  border-color: var(--brand);
 }
 
 .badge {
@@ -221,7 +220,7 @@ details[open] > summary .chevron {
 }
 
 .badge-low { background: var(--low-bg); color: var(--low); }
-.badge-out { background: var(--out-bg); color: var(--out); }
+.badge-out { background: var(--brand); color: var(--paper); }
 .badge-ok { background: var(--ok-bg); color: var(--ok); }
 .badge-gold { background: var(--gold-bg); color: var(--gold); }
 .badge-clay { background: var(--clay-bg); color: var(--clay); }
@@ -238,9 +237,9 @@ details[open] > summary .chevron {
 }
 
 .chip[aria-pressed="true"] {
-  background: #1b4332;
-  border-color: #1b4332;
-  color: #f6f1e8;
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
 }
 
 dialog {
@@ -249,9 +248,10 @@ dialog {
   max-height: min(90dvh, 44rem);
   padding: 0;
   border: 0;
-  border-radius: 1rem;
+  border-radius: 20px;
   background: var(--card);
   color: var(--ink);
+  box-shadow: 0 14px 40px rgb(84 32 31 / 0.12);
 }
 
 dialog:modal {
@@ -261,7 +261,50 @@ dialog:modal {
 dialog::backdrop {
   overflow: hidden;
   overscroll-behavior: contain;
-  background: rgb(20 16 12 / 0.5);
+  background: rgb(84 32 31 / 0.46);
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0 0 0.4rem;
+  color: var(--brand);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 1.35rem;
+  height: 2px;
+  background: var(--brand);
+  flex-shrink: 0;
+}
+
+.order-pill {
+  display: flex;
+  min-width: 4.6rem;
+  min-height: 4.6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  border-radius: 22px;
+  background: var(--brand);
+  color: var(--ribbon-ink);
+  line-height: 1;
+  padding: 0.45rem 0.7rem;
+}
+
+.bg-card {
+  box-shadow: 0 10px 28px rgb(84 32 31 / 0.06);
+}
+
+nav [aria-current="page"] {
+  box-shadow: inset 0 -3px 0 var(--brand);
 }
 
 .field {

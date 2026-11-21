@@ -113,7 +113,7 @@ export function CountView({
           );
         })}
       </div>
-      {sections.length === 0 ? <p className="rounded-2xl border border-line bg-card p-4">Nothing matches.</p> : null}
+      {sections.length === 0 ? <p className="rounded-[20px] border border-line bg-card p-4">Nothing matches.</p> : null}
       {sections.map((section) => {
         const ordering = section.items.filter(needsOrder);
         const low = ordering.filter((item) => item.stock === "low").length;
@@ -121,7 +121,7 @@ export function CountView({
         return (
           <details
             key={`${section.category}:${filter}:${query}`}
-            className="overflow-hidden rounded-2xl border border-line bg-card"
+            className="overflow-hidden rounded-[20px] border border-line bg-card"
             {...(openSections ? { open: true } : {})}
           >
             <summary>
@@ -198,7 +198,7 @@ function ItemCard({
     .join(" · ");
 
   return (
-    <details className="rounded-xl bg-sand open:bg-paper">
+    <details className="rounded-[14px] bg-sand open:bg-paper">
       <summary>
         <span className="summary-row items-start px-3 py-2">
         <span aria-hidden className="chevron mt-1 text-muted">

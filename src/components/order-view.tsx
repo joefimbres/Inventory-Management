@@ -53,7 +53,7 @@ export function OrderView({
           Send {lines.length} to Joe
         </button>
       ) : (
-        <p className="rounded-2xl border border-line bg-card p-4 text-sm">
+        <p className="rounded-[20px] border border-line bg-card p-4 text-sm">
           {justSent
             ? "Joe has this list. Mark more items on Count when something else runs low."
             : "Nothing is marked low or out. Mark items on Count, then come back here."}
@@ -72,7 +72,7 @@ export function OrderView({
               const amount = qty ? (line.unit ? `${qty} ${line.unit}` : qty) : "Qty not set";
               return (
                 <li key={line.itemId}>
-                  <details className="rounded-2xl border border-line bg-card">
+                  <details className="rounded-[20px] border border-line bg-card">
                     <summary>
                       <span className="summary-row px-3">
                       <span aria-hidden className="chevron text-muted">

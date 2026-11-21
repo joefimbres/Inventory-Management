@@ -305,15 +305,12 @@ export function InventoryApp() {
 
   return (
     <div className="min-h-full">
-      <header className="bg-[#1b4332] pt-[max(0.75rem,env(safe-area-inset-top))] text-[#f6f1e8]">
-        <div className="mx-auto flex w-full max-w-xl items-center gap-3 px-4 py-4">
-          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/10 font-display text-sm" aria-hidden>
-            HHC
-          </span>
-          <div className="min-w-0 flex-1">
-            <p className="text-xs tracking-[0.16em] uppercase text-[#d5e6da]">Hiking Hawaii Cafe</p>
-            <h1 className="font-display text-3xl leading-none">Inventory</h1>
-            <p className="mt-1 text-xs text-[#d5e6da]">
+      <header className="border-b border-line bg-paper pt-[max(0.5rem,env(safe-area-inset-top))] text-ink">
+        <div className="mx-auto flex w-full max-w-xl items-end justify-between gap-3 px-4 py-4">
+          <div className="min-w-0">
+            <p className="eyebrow">Hiking Hawaii Cafe</p>
+            <h1 className="font-display text-[2.35rem] leading-[0.9]">Inventory</h1>
+            <p className="mt-2 text-xs font-medium text-muted">
               {state
                 ? state.updatedAt === SEED_UPDATED_AT
                   ? "No counts saved yet"
@@ -321,9 +318,9 @@ export function InventoryApp() {
                 : "Loading the list"}
             </p>
           </div>
-          <p className="text-right text-sm leading-tight">
-            <span className="block font-display text-3xl leading-none">{ready && state ? draftCount : "–"}</span>
-            to order
+          <p className="order-pill">
+            <span className="font-display text-3xl leading-none">{ready && state ? draftCount : "–"}</span>
+            <span className="text-[10px] font-extrabold tracking-[0.14em] uppercase">to order</span>
           </p>
         </div>
       </header>
@@ -383,7 +380,7 @@ function LocalBanner({ warning }: { warning: Exclude<Warning, null> }) {
       ? "This phone only. Shared storage isn’t set up, so other people won’t see these changes."
       : "Shared storage didn’t respond. Changes stay on this phone until it reconnects.";
   return (
-    <p role="status" className="border-b-4 border-[#b8431f] bg-sand px-4 py-3 text-center text-sm font-semibold">
+    <p role="status" className="border-b-[3px] border-moss bg-sand px-4 py-3 text-center text-sm font-semibold text-ink">
       {text}
     </p>
   );
@@ -448,7 +445,7 @@ function PinForm() {
   }
 
   return (
-    <form onSubmit={(event) => void submit(event)} className="rounded-2xl border border-line bg-card p-4">
+    <form onSubmit={(event) => void submit(event)} className="rounded-[20px] border border-line bg-card p-4">
       <h2 className="font-display text-2xl">Enter the PIN</h2>
       <p className="mt-1 text-sm text-muted">This list is shared with the cafe. Ask Joe if you don’t have the PIN.</p>
       <div className="field mt-4">

@@ -52,11 +52,11 @@ export function ItemsView({
           </div>
         </form>
       </search>
-      {sections.length === 0 ? <p className="rounded-2xl border border-line bg-card p-4">Nothing matches.</p> : null}
+      {sections.length === 0 ? <p className="rounded-[20px] border border-line bg-card p-4">Nothing matches.</p> : null}
       {sections.map((section) => (
         <details
           key={`${section.category}:${query}`}
-          className="overflow-hidden rounded-2xl border border-line bg-card"
+          className="overflow-hidden rounded-[20px] border border-line bg-card"
           {...(needle.length > 0 ? { open: true } : {})}
         >
           <summary>

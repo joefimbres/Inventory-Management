@@ -45,7 +45,7 @@ export function SummaryPanel({
   }
 
   return (
-    <section className="rounded-2xl border border-line bg-card p-4" aria-labelledby={headingId ?? titleId}>
+    <section className="rounded-[20px] border border-line bg-card p-4" aria-labelledby={headingId ?? titleId}>
       <h3 ref={headingRef} id={headingId ?? titleId} tabIndex={-1} className="font-display text-xl">
         Order summary
       </h3>
